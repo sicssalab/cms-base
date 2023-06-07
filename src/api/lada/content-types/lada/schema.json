@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ladas",
+  "info": {
+    "singularName": "lada",
+    "pluralName": "ladas",
+    "displayName": "Lada",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lada": {
+      "type": "string"
+    },
+    "site_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::site-user.site-user",
+      "mappedBy": "lada_user"
+    }
+  }
+}

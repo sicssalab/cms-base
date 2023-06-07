@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_ladas",
+  "info": {
+    "singularName": "type-lada",
+    "pluralName": "type-ladas",
+    "displayName": "TypeLada"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "site_users",
+  "info": {
+    "singularName": "site-user",
+    "pluralName": "site-users",
+    "displayName": "Site_User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "lada_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lada.lada",
+      "inversedBy": "site_users"
+    },
+    "celphone": {
+      "type": "integer",
+      "required": true
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "maxLength": 250,
+      "minLength": 5
+    },
+    "sexo": {
+      "type": "enumeration",
+      "enum": [
+        "Masculino",
+        "Femenino"
+      ],
+      "required": true
+    }
+  }
+}
