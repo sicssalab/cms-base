@@ -26,8 +26,10 @@
       "inversedBy": "site_users"
     },
     "celphone": {
-      "type": "integer",
-      "required": true
+      "type": "biginteger",
+      "required": true,
+      "unique": true,
+      "max": "9999999999"
     },
     "birthday": {
       "type": "date"
@@ -36,15 +38,32 @@
       "type": "email",
       "required": true,
       "maxLength": 250,
-      "minLength": 5
+      "minLength": 5,
+      "unique": true
     },
-    "sexo": {
-      "type": "enumeration",
-      "enum": [
-        "Masculino",
-        "Femenino"
-      ],
-      "required": true
+    "gender_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::gender-user.gender-user",
+      "inversedBy": "site_users"
+    },
+    "password_view": {
+      "type": "string",
+      "required": true,
+      "minLength": 6,
+      "private": true
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

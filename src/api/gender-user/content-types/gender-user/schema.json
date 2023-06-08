@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gender_users",
+  "info": {
+    "singularName": "gender-user",
+    "pluralName": "gender-users",
+    "displayName": "Gender_User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gender": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "site_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::site-user.site-user",
+      "mappedBy": "gender_user"
+    }
+  }
+}
