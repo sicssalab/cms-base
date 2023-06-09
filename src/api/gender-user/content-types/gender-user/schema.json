@@ -21,6 +21,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::site-user.site-user",
+      "private": true,
       "mappedBy": "gender_user"
     }
   }
