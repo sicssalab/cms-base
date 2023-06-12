@@ -64,6 +64,12 @@
     "active": {
       "type": "boolean",
       "default": true
+    },
+    "page_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::page-user.page-user",
+      "inversedBy": "site_users"
     }
   }
 }

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "urbans",
+  "info": {
+    "singularName": "urban",
+    "pluralName": "urbans",
+    "displayName": "Urban"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "keyname": {
+      "type": "string",
+      "unique": true
+    },
+    "page_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page-user.page-user",
+      "mappedBy": "urban"
+    }
+  }
+}
