@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_pages",
+  "info": {
+    "singularName": "post-page",
+    "pluralName": "post-pages",
+    "displayName": "Post_Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "page_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page-user.page-user",
+      "inversedBy": "post_pages"
+    },
+    "message_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message-post.message-post",
+      "mappedBy": "post_page"
+    }
+  }
+}

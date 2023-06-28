@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_urbans",
+  "info": {
+    "singularName": "post-urban",
+    "pluralName": "post-urbans",
+    "displayName": "Post_Urban",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "urban": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::urban.urban",
+      "inversedBy": "post_urbans"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "message_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message-post.message-post",
+      "mappedBy": "post_urban"
+    }
+  }
+}

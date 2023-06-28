@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workstation_users",
+  "info": {
+    "singularName": "workstation-user",
+    "pluralName": "workstation-users",
+    "displayName": "Workstation_User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "site_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::site-user.site-user",
+      "mappedBy": "workstation_user"
+    }
+  }
+}

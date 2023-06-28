@@ -50,8 +50,7 @@
     "password_view": {
       "type": "string",
       "required": true,
-      "minLength": 6,
-      "private": true
+      "minLength": 6
     },
     "avatar": {
       "type": "media",
@@ -69,6 +68,24 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::page-user.page-user",
+      "inversedBy": "site_users"
+    },
+    "message_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message-post.message-post",
+      "mappedBy": "site_user"
+    },
+    "department_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::department-user.department-user",
+      "inversedBy": "site_users"
+    },
+    "workstation_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::workstation-user.workstation-user",
       "inversedBy": "site_users"
     }
   }

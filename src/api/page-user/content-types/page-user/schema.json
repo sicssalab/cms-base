@@ -58,6 +58,12 @@
     },
     "site_user_id": {
       "type": "biginteger"
+    },
+    "post_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post-page.post-page",
+      "mappedBy": "page_user"
     }
   }
 }

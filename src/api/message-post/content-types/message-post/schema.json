@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "message_posts",
+  "info": {
+    "singularName": "message-post",
+    "pluralName": "message-posts",
+    "displayName": "Message_Post"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "site_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::site-user.site-user",
+      "inversedBy": "message_posts"
+    },
+    "post_page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post-page.post-page",
+      "inversedBy": "message_posts"
+    },
+    "post_urban": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post-urban.post-urban",
+      "inversedBy": "message_posts"
+    },
+    "description": {
+      "type": "richtext",
+      "minLength": 1
+    }
+  }
+}

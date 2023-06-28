@@ -4,7 +4,8 @@
   "info": {
     "singularName": "urban",
     "pluralName": "urbans",
-    "displayName": "Urban"
+    "displayName": "Urban",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,6 +24,26 @@
       "relation": "oneToMany",
       "target": "api::page-user.page-user",
       "mappedBy": "urban"
+    },
+    "post_urbans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post-urban.post-urban",
+      "mappedBy": "urban"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "profileCover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "department_users",
+  "info": {
+    "singularName": "department-user",
+    "pluralName": "department-users",
+    "displayName": "Department_User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "site_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::site-user.site-user",
+      "mappedBy": "department_user"
+    }
+  }
+}
