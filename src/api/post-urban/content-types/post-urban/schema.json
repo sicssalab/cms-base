@@ -26,6 +26,15 @@
       "relation": "oneToMany",
       "target": "api::message-post.message-post",
       "mappedBy": "post_urban"
+    },
+    "multimedia": {
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

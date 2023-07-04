@@ -1,3 +1,31 @@
+En produccion cambiar el env (uso en local para dev) por el que dice env.production o subir solo el env.production quitandole lo de .production
+
+usar el build del local al subir los archivos ya que no hay memoria para hacerlo desde plesk
+
+Crear el Schema (DB) 'miraro_api_headless_prod' e importe el archivo arvhico.sql a la base
+El proyecto usa yarn, para las dependencias
+para ejecutarlo por primera vez usar 
+
+```
+yarn develop
+```
+
+si manda error de 'el cliente no admite el protocolo de autenticación solicitado por el servidor; considere actualizar el cliente MySQL'
+
+ejecutar en una consulta de MYSQL Workbench
+
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Happy#2019*';
+```
+
+y despues 
+
+```
+flush privileges;
+```
+
+vuelva a conectarse a la BD con su pass
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
